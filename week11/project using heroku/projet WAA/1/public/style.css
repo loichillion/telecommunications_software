@@ -1,0 +1,141 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: red;
+}
+
+h2{
+    color: red;
+}
+
+.userinfo{
+    margin-bottom: 1rem;
+}
+.wrapper-gallerie {
+    display: grid;
+    grid-gap: 10px;
+    /* flex-flow: row wrap; */
+    /* flex-wrap: wrap; */
+    padding: 1em;
+    /* border: 3px solid whitesmoke;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px #7c8395;
+    min-width: 600px; */
+  }
+
+.wrapper-gallerie>*{
+    flex: 1 1 auto;
+}
+
+canvas{
+    background: white;
+}
+
+
+
+.div2{
+    border: 1px black solid;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.div3{
+    width: 410px;
+    min-width: 400px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 1px solid gray; 
+    box-shadow: 0px 5px 10px #7c8395;
+}
+
+.div4{
+    width: 410px;
+    min-width: 400px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+/* .item{
+    margin-left: auto;
+    margin-right: auto;
+    flex:1;
+} */
+
+.wrapper-gallerie2 {
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    /* column-gap: 25px;
+    row-gap: 25px; */
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+    
+}
+
+.wrapper-gallerie3 {
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    /* column-gap: 25px;
+    row-gap: 25px; */
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+    
+}
+
+.mydiv-1-gallerie {
+    flex: 5;
+    /* box-shadow: 0px 5px 10px #7c8395; */
+    min-height: 720px;
+    max-height: 720px;
+    padding: 1em;
+    border-radius: 20px;
+    min-width: 600px;
+    max-width: 845px;
+    margin: 2%;
+}
+
+.mydiv-1-gallerie2 {
+    flex: 5;
+    box-shadow: 0px 5px 10px #7c8395; 
+    padding: 1em;
+    border-radius: 20px;
+    min-width: 600px;
+    max-width: 845px;
+    margin: 2%;
+}
+
+.mydiv-2-gallerie {
+    flex: 5;
+    /* box-shadow: 0px 5px 10px #7c8395; */
+    min-height: 720px;
+    max-height: 720px;
+    padding: 1em;
+    border-radius: 20px;
+    min-width: 600px;
+    max-width: 845px;
+    margin: 2%;
+}
+
+.mydiv-2-gallerie2 {
+    flex: 5;
+    box-shadow: 0px 5px 10px #7c8395; 
+    padding: 1em;
+    border-radius: 20px;
+    min-width: 600px;
+    max-width: 845px;
+    margin: 2%;
+}
+

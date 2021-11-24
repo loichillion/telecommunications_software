@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>projet WAA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <h1> Web Application Architectures : <h1>
+    <h2> Exam whitebord: </h2>
+    <h3> Loïc HILLION </h3>
+    <div class="wrapper-gallerie3">
+        <div class="mydiv-1-gallerie2">
+            <div class="wrapper-gallerie">
+                <h3>Connection :</h3>
+                <div class="userinfo">
+                    <input type="text" id="username_field" placeholder="Username">
+                    <button id="submit_username" onclick="registerUser()">Submit</button>
+                </div>
+                <div class="userinfo">
+                    <span id="user_message">You are currently not registered. Register to be able to see your drawings<br>Should be more than 2 characters</span><br>
+                    <span id="last_drawer"></span>
+                </div>
+                <div class="item">
+                    <label for="saveas">ouvrir image dans un autre onglet : </label>
+                    <input id="saveas" class="button" type = "button" onclick = "saveAsImage()" name="saveas" value="Clique" ></input>
+                </div>
+                <!-- <div class="item">
+                    <label for="saveon">sauvgarder sur le server canvas url : </label>
+                    <input id="saveon" class="button" type = "button" onclick = "saveOnServer()" name="saveon" value="Clique" ></input>
+                </div> -->
+                <!-- <div class="item">
+                    <label for="filetoupload">sauvgarder sur le server canvas url : </label>
+                    <form action="fileupload" method="post" enctype="multipart/form-data">
+                        <input type="file" name="filetoupload">
+                        <input type="submit">
+                    </form>
+                </div> -->
+                <div class="item">
+                    <label for="imgUploader">sauvgarder sur le server une image local : </label>
+                    <form id="frmUploader" enctype="multipart/form-data" action="api/Upload/" method="post">
+                        <input type="file" name="imgUploader" multiple />
+                        <input type="submit" name="submit" id="btnSubmit" value="Upload" /> </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="mydiv-2-gallerie2">
+            <div class="wrapper-gallerie">
+                <h3>Draw info :</h3>
+                <div class="item">
+                    <select id="forme" class="change">
+                        <option value="">forme géométrique</option>
+                        <option value="square">square</option>
+                        <option value="triangle">triangle</option>
+                        <option value="circle">circle</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="batb">border Color : </label><input type="color" id="borderColor" name="batb" value="#000000"></input>
+                </div>
+                <div class="item">
+                    <label for="bgatb">background Color : </label><input type="color" id="backgroundColor" name="bgatb" value="#000000"></input>
+                </div>
+                <div class="item">
+                    <select id="borderThickness" class="change">
+                        <option value="">border thickness</option>
+                        <option value="2">2 px</option>
+                        <option value="4">4 px</option>
+                        <option value="6">6 px</option>
+                        <option value="8">8 px</option>
+                        <option value="10">10 px</option>
+                        <option value="20">20 px</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <select id="size" class="change">
+                        <option value="">size</option>
+                        <option value="20">20 px</option>
+                        <option value="40">40 px</option>
+                        <option value="60">60 px</option>
+                        <option value="80">80 px</option>
+                        <option value="100">100 px</option>
+                        <option value="200">200 px</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="pencil_color">Pencil color : </label>
+                    <input id="pencil_color" type="color">
+                </div>
+                <div class="item">
+                    <label for="pencil_size">Pencil size : </label>
+                    <select id="pencil_size">
+                        <option value="2">2px</option>
+                        <option value="4">4px</option>
+                        <option value="6">6px</option>
+                        <option value="8">8px</option>
+                        <option value="10">10px</option>
+                        <option value="20">20px</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="display">dessiner la forme au centre : </label>
+                    <input id="display" class="button" type = "button" onclick = "displayAuCentre()" name="display" value="Clique" ></input>
+                </div>
+                <div class="item">
+                    <label for="display2">dessiner la forme aleatoirement : </label>
+                    <input id="display2" class="button" type = "button" onclick = "displayAleatoire()" name="display2" value="Clique" ></input>
+                </div>
+                <div class="item">
+                    <label for="clear">netoyez le whitebord : </label>
+                    <input id="clear" class="button" type = "button" onclick = "netoyage()" name="clear" value="Clique" ></input>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <h3>whitebord</h3>
+    <canvas class="div2" id="canvas">
+    </canvas>
+</body>
+</html>
+
+<script src="../socket.io/socket.io.js"></script>
+<script src="./script.js"></script>

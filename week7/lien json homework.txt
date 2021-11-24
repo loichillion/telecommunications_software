@@ -1,0 +1,1 @@
+https://4v9r83qfo4.execute-api.eu-central-1.amazonaws.com/dev

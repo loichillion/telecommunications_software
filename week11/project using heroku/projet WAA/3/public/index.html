@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>projet WAA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+</head>
+
+<body> 
+    <h1> Web Application Architectures : <h1>
+    <h2> Exam movie quizz: </h2>
+    <h3> Loïc HILLION </h3>
+    <div class="wrapper-gallerie3">
+        <div class="mydiv-1-gallerie2">
+            <div class="wrapper-gallerie">
+                <h3>Connection :</h3>
+                <div class="userinfo">
+                    <input type="text" id="username_field" placeholder="Username">
+                    <button id="submit_username" onclick="registerUser()">Submit</button>
+                </div>
+                <div class="userinfo">
+                    <span id="user_message">You are currently not registered. Register to be able to see your drawings<br>Should be more than 2 characters</span><br>
+                    <span id="last_drawer"></span>
+                </div>
+            </div>
+        </div>       
+    </div> 
+    <div class="infoFilm" id="AEG">
+    </div> 
+    <div class="infoFilm">
+        <label for="reponse">Give the director or one of the actors of the movie : </label>
+        <form id="askForm">
+            <input type="text" name="reponse" id="reponse"/>
+            <input type="button" name="submit" id="btnSubmit" value="Valider" onclick="reponseAutor()" /><!--si j'utilise un type submit le text en rouge ne rest pas   -->
+        </form><br>
+        <span class="spanReponse" id="reponseAutorId"></span>
+    </div> 
+    <div class="infoFilm2" id="reponseGood">
+        <h3 id="nameAutorGood"></h3>
+        <div id="imageAutor">
+
+    </div>
+    </div>
+    <div class="infoFilm" id="question2">
+        <label for="reponse2">Give the name of a movie where this person was actor or director : </label>
+        <form id="askForm2">
+            <input type="text" name="reponse2" id="reponse2"/>
+            <input type="button" name="submit2" id="btnSubmit2" value="Valider" onclick="reponseMovie()" /><!--si j'utilise un type submit le text en rouge ne rest pas   -->
+        </form><br>
+        <span class="spanReponse" id="reponseAutorId2"></span>
+    </div>
+    <div class="infoFilm2" id="reponseGood2">
+    </div>
+
+</body>
+</html>
+
+<script src="../socket.io/socket.io.js"></script>
+<script src="./script.js"></script>
